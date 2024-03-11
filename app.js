@@ -1,4 +1,5 @@
-let tl = gsap.timeline();
+function loadingAnimation(){
+    let tl = gsap.timeline();
 
 tl.from(".line h1",{
     y: 150,
@@ -32,16 +33,42 @@ tl.to(".line h2",{
 tl.to("#loader",{
     opacity: 0,
     duration: 0.4,
-    delay: 3.1,
+    delay: 2,
 });
 
 tl.from("#page1",{
     y: 1600,
     opacity: 0,
     delay: 0.2,
-    duration: 0.5,
+    duration: 0.6,
 });
 
 tl.to("#loader",{
     display:"none",
 });
+
+tl.from("#nav",{
+    opacity: 0,
+    y: -100,
+})
+
+tl.from("#hero1 h1,#hero2 h1,#hero3 h2,#hero4 h1",{
+    y: 100,
+    duration: 1,
+    stagger: 0.2,
+});
+}
+ 
+function cursor(){
+    document.addEventListener("mousemove",function(dets){
+        gsap.to("#cursor",{
+            left: dets.x,
+            top: dets.y,
+        });
+    });
+    
+    Shery.makeMagnet("#nav-part2 h3",{});
+}
+
+loadingAnimation();
+cursor();
