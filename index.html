@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obys Agency</title>
+    <!-- favicon -->
     <link rel="shortcut icon" href="./favicon/android-chrome-512x512.png" type="image/x-icon">
+    <!-- locomotive css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <!-- shery js cdn -->
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <!-- remix icon cdn -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- Animate.css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="cursor"></div>
+    <!-- <div id="cursor"></div> -->
     <div id="loader">
         <div class="line">
             <div id="line1-part1">
@@ -28,7 +35,7 @@
         </div>
     </div>
     <div id="main">
-        <div id="page1">
+        <div id="page1" data-scroll data-scroll-speed="-1">
             <div id="nav">
                 <svg class="brand__svg" width="71" height="27" viewBox="0 0 71 27">
                     <path d="M40.7622 24.5917C40.7622 23.6724 41.4511 22.9829 42.3697 22.9829C43.2883 22.9829 43.9773 23.6724 43.9773 24.5917C43.9773 25.511 43.2883 26.2005 42.3697 26.2005C41.566 26.2005 40.7622 25.3961 40.7622 24.5917Z" fill="currentColor"></path>
@@ -57,23 +64,60 @@
             <div class="hero" id="hero3">
                 <h2>Web</h2>
                 <h2>/</h2>
-                <h2>Graphics</h2>
+                <h2>Graphic</h2>
             </div>
             <div class="hero" id="hero4">
                 <h1>Experience</h1>
             </div>
         </div>
-        <div id="page2">
+        <div id="page2" data-scroll data-scroll-speed="-1">
             <div id="video-container">
                 <div id="video-cursor">
                     <i class="ri-play-fill"></i>
                 </div>
-                <img src="./Image/Video cover.jpg" alt="cover image">
-                <video autoplay muted loop src="./Videos/Obys-Showreel-2022.mp4"></video>
+                <!-- <img src="./Image/Video cover.jpg" alt="cover image"> ye constant image deta hai jo remove nhi ho sakti use bg-image as alternatives-->
+                <video loop src="./Videos/Obys-Showreel-2022.mp4"></video>
             </div>
         </div>
-        <div id="page3"></div>
-        <div id="page4">
+        <div id="page3" data-scroll data-scroll-speed="-2">
+            <h1>Our Projects</h1>
+            <div class="underline-2"></div>
+            <div id="image-div-container"> <!--Gooey Effect-->
+                <div class="image-div">
+                    <img src="Image/Olga_Prudka_1.png" alt="image">
+                    <img src="Image/Olga_Prudka_3.png" alt="alternate Image">
+                </div>
+                <div class="image-div">
+                    <img src="Image/AIM-1.png" alt="image">
+                    <img src="Image/AIM-2.png" alt="alternate Image">
+                </div>
+                <div class="page3-circle1">
+                    <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+                        <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="circle-in">
+                        <p>We are thrilled to have you on board. Hope you enjoy our projects ❤️</p>
+                    </div>
+                </div>
+                <div class="page3-circle2">
+                    <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+                        <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="circle-in">
+                        <p>We are thrilled to have you on board. Hope you enjoy our projects ❤️</p>
+                    </div>
+                </div>
+                <div class="image-div">
+                    <img src="Image/OCHI.png" alt="image">
+                    <img src="Image/OCHI_2-1.png" alt="alternate Image">
+                </div>
+                <div class="image-div">
+                    <img src="Image/Laxer_1-2.png" alt="image">
+                    <img src="Image/Laxer_3-1.png" alt="alternate Image">
+                </div>
+            </div>
+        </div>
+        <div id="page4" data-scroll data-scroll-speed="-1">
             <div id="page4-content">
                 <h1>About Obys</h1>
                 <div class="underline"></div>
@@ -156,12 +200,68 @@
                 <div class="underline"></div>
             </div>
         </div>
-        <div id="page5">
-            
+        <div id="page5" data-scroll data-scroll-speed="-1">
+            <div class="elem">
+                <h1>-<span>Sport</span> - Fashion - Technology-</h1>
+                <h1>Sport - <span>Fashion</span> - Technology-</h1>
+            </div>
+            <div class="elem2">
+                <h1>Science - <span>Partners</span> - Travel-</h1>
+                <h1>Science - Partners - <span>Travel</span>-</h1>
+            </div>
+            <div class="elem">
+                <h1>-Sport - Fashion - <span>Technology</span>-</h1>
+                <h1>Sport - <span>Fashion</span> - Technology</h1>
+            </div>
+            <div class="elem2">
+                <h1>Science - <span>Partners</span> - Travel-</h1>
+                <h1>Science - <span>Partners</span> - Travel</h1>
+            </div>
+        </div>
+        <div id="footer" data-scroll data-scroll-speed="-2.5">
+            <div id="footer-text">
+                <h1>Let's Create</h1>
+                <h2>Let's Create</h2>
+
+            </div>
+            <div class="underline-2"></div>
+            <div id="footer-div">
+                <div class="box">
+                    <h6>Socials</h6>
+                    <h5>Dribbble</h5>
+                    <h5>Behance</h5>
+                    <h5>Instagram</h5>
+                    <h5>Facebook</h5>
+                    <h5>Twitter</h5>
+                    <h5>YouTube</h5>
+                </div>
+                <div class="box">
+                    <h6>Address</h6>
+                    <h5>Pushkinska 5
+                        61057 Kharkiv
+                        Ukraine</h5>
+
+                </div>
+                <div class="box">
+                    <h6>Say Hi!</h6>
+                    <h5>info@obys.agency</h5>
+                </div>
+            </div>
+            <div class="underline-2" style="margin-bottom: 3vw;"></div>
+            <h5>Obys Agency © 2024</h5>
         </div>
     </div>
+    <!-- locomotive js -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!-- gsap js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ScrollTrigger js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <!-- shery js  -->
     <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
     <script src="app.js"></script>
 </body>
